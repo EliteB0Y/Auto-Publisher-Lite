@@ -1,6 +1,5 @@
 import os, discord, asyncio
 from discord.ext import commands, tasks
-from keep_up import keep_up
 #import secret
 
 class AutoPublisher(commands.Bot):
@@ -86,6 +85,5 @@ async def main():
         resetpublishLogs.start()
         print("Background Publish Logs task started.")
         await client.start(os.environ.get('TOKEN'))
-
-keep_up()
+        
 asyncio.run(main())
